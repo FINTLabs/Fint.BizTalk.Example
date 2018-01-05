@@ -1,0 +1,355 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="b9635793-c5fb-4832-b674-fb11507b84c4" LowerBound="1.1" HigherBound="81.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="FINT.BizTalk.Example.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="fa0a5c68-4a31-47c7-aa0d-5e0546ec6d35" ParentLink="Module_PortType" LowerBound="12.1" HigherBound="19.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_TriggerGetEmployees" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="bcad778c-8d0a-4b5a-903c-741b3776cfa2" ParentLink="PortType_OperationDeclaration" LowerBound="14.1" HigherBound="18.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="aee017da-f27e-41fc-b532-4669466a3132" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="16.13" HigherBound="16.46">
+                    <om:Property Name="Ref" Value="FINT.BizTalk.Example.Orchestrations.MultipartType_TriggerGetEmployees" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="9f77c12a-bb53-4a8f-aad3-51f83e1ee304" ParentLink="Module_PortType" LowerBound="19.1" HigherBound="26.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_FintEmployees" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="b1c8f244-0adc-4774-bb02-555abbf97ba0" ParentLink="PortType_OperationDeclaration" LowerBound="21.1" HigherBound="25.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="21963b50-4632-439b-9a70-56e04c14925c" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="23.13" HigherBound="23.46">
+                    <om:Property Name="Ref" Value="FINT.BizTalk.Example.Orchestrations.MultipartType_TriggerGetEmployees" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="bfa52080-d531-4cbf-b936-d7ae09a0c40a" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="23.48" HigherBound="23.82">
+                    <om:Property Name="Ref" Value="FINT.BizTalk.Example.Orchestrations.MultipartType_GetEmployeesResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="9be5fb7b-f30a-42fd-b88f-0951bc8ea85c" ParentLink="Module_PortType" LowerBound="26.1" HigherBound="33.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_GetEmployeesResponse" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="95a00eb5-b376-4d38-badc-167773099835" ParentLink="PortType_OperationDeclaration" LowerBound="28.1" HigherBound="32.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="c43473a1-c5a3-4d20-9379-f8fe8781ed2b" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="30.13" HigherBound="30.47">
+                    <om:Property Name="Ref" Value="FINT.BizTalk.Example.Orchestrations.MultipartType_GetEmployeesResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="bcedc662-bd09-4e3a-a237-5dd6917e4854" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MultipartType_TriggerGetEmployees" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="d46e15e7-ca29-4622-b333-43371dd31d38" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="FINT.BizTalk.Example.Schemas.TriggerGetEmployees" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="e71929bc-5150-4d88-8ff7-d50bedac6064" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MultipartType_GetEmployeesResponse" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="3b8267e7-d12c-4ad7-b01c-8e2bc6569fa1" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="FINT.BizTalk.Example.Schemas.EmployeesSchema" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="538e569d-bc67-46bd-8cfb-3d7b92c3b235" ParentLink="Module_ServiceDeclaration" LowerBound="33.1" HigherBound="80.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="GetEmployeesFromFint" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="dcdfc772-076e-4315-bbee-e5626276015f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AccessToken" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6040ab10-c134-4057-be0c-9ec7e2eae3f1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="Type" Value="FINT.BizTalk.Example.Orchestrations.MultipartType_TriggerGetEmployees" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TriggerGetEmployees" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="432f1af5-efed-4cb8-892c-5fdf6aa508a8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="43.1" HigherBound="44.1">
+                <om:Property Name="Type" Value="FINT.BizTalk.Example.Orchestrations.MultipartType_TriggerGetEmployees" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetEmployeesRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="3318a8f2-d573-4eab-afbc-e7e5be58c804" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="44.1" HigherBound="45.1">
+                <om:Property Name="Type" Value="FINT.BizTalk.Example.Orchestrations.MultipartType_GetEmployeesResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetEmployeesResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="60171f12-615b-44cb-b49a-8516ee579c32" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="6a2e8683-e5d7-4de3-b84e-eff7b20a9c29" ParentLink="ServiceBody_Statement" LowerBound="48.1" HigherBound="51.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_TriggerGetEmployees" />
+                    <om:Property Name="MessageName" Value="TriggerGetEmployees" />
+                    <om:Property Name="OperationName" Value="Operation" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Reveive_TriggerGetEmployees" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="2b639259-e249-4420-9f16-fc700fd5f50f" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;Trigger2&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Call" OID="da23010d-d1e8-4f91-be7e-c6b5e3376776" ParentLink="ServiceBody_Statement" LowerBound="51.1" HigherBound="53.1">
+                    <om:Property Name="Identifier" Value="CallOrchestration_1" />
+                    <om:Property Name="Invokee" Value="FINT.BizTalk.Example.Orchestrations.Authenticate" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Authenticate" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Parameter" OID="4a5c0c7f-3c40-479a-a086-d7b99d3550f0" ParentLink="InvokeStatement_Parameter">
+                        <om:Property Name="Direction" Value="Out" />
+                        <om:Property Name="Name" Value="AccessToken" />
+                        <om:Property Name="Type" Value="System.String" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="e064f19f-3d27-42b8-8826-e8cfbe7bcbb5" ParentLink="ServiceBody_Statement" LowerBound="53.1" HigherBound="69.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Create request message" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="e0f71dfa-3cb5-4ab4-811a-9358afe1cf41" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="68.1">
+                        <om:Property Name="Expression" Value="GetEmployeesRequest = TriggerGetEmployees;&#xD;&#xA;&#xD;&#xA;GetEmployeesRequest(WCF.HttpMethodAndUrl) = &quot;GET&quot;;&#xD;&#xA;GetEmployeesRequest(WCF.SuppressMessageBodyForHttpVerbs) = &quot;GET&quot;;&#xD;&#xA;GetEmployeesRequest(WCF.SecurityMode) = &quot;Transport&quot;;&#xD;&#xA;GetEmployeesRequest(WCF.MaxReceivedMessageSize) = 2147483647;&#xD;&#xA;&#xD;&#xA;GetEmployeesRequest(WCF.HttpHeaders) = &quot;Authorization: Bearer &quot; + AccessToken + &quot;\r\nx-org-id: pwf.no\r\nuser-agent: BizTalk Server 2013 R2&quot;;&#xD;&#xA;&#xD;&#xA;GetEmployeesRequest(WCF.ProxyToUse) = &quot;UserSpecified&quot;;&#xD;&#xA;GetEmployeesRequest(WCF.ProxyAddress) = &quot;http://localhost:8888/&quot;;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Create message" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="5cfd5e97-ea6d-45e2-98f9-80be10227e7e" ParentLink="Construct_MessageRef" LowerBound="54.23" HigherBound="54.42">
+                        <om:Property Name="Ref" Value="GetEmployeesRequest" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="99b3f4d1-8518-42ac-9724-7f3b13ab4b89" ParentLink="ServiceBody_Statement" LowerBound="69.1" HigherBound="72.1">
+                    <om:Property Name="Expression" Value="Port_GetEmployees(Microsoft.XLANGs.BaseTypes.Address) = SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;FintUrlPersonalressurserBeta&quot;);&#xD;&#xA;Port_GetEmployees(Microsoft.XLANGs.BaseTypes.TransportType) = &quot;WCF-WebHttp&quot;;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Set port config" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Send" OID="cbce7b78-66ee-463a-bc57-87bc2f6f9b31" ParentLink="ServiceBody_Statement" LowerBound="72.1" HigherBound="74.1">
+                    <om:Property Name="PortName" Value="Port_GetEmployees" />
+                    <om:Property Name="MessageName" Value="GetEmployeesRequest" />
+                    <om:Property Name="OperationName" Value="Operation" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request Employees" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="e83cde7d-6515-44ce-ab75-85dec7d1f195" ParentLink="ServiceBody_Statement" LowerBound="74.1" HigherBound="76.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="Port_GetEmployees" />
+                    <om:Property Name="MessageName" Value="GetEmployeesResponse" />
+                    <om:Property Name="OperationName" Value="Operation" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive Employees" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="7b47b9aa-f1c4-454c-ab7f-d134cac966ff" ParentLink="ServiceBody_Statement" LowerBound="76.1" HigherBound="78.1">
+                    <om:Property Name="PortName" Value="Port_SaveResponse" />
+                    <om:Property Name="MessageName" Value="GetEmployeesResponse" />
+                    <om:Property Name="OperationName" Value="Operation" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="12fd07e0-7d79-4821-af69-804a6938f6f8" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="36.1" HigherBound="38.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="FINT.BizTalk.Example.Orchestrations.PortType_TriggerGetEmployees" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_TriggerGetEmployees" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="eec2b832-29a6-4136-adb6-0b64c05b3b77" ParentLink="PortDeclaration_CLRAttribute" LowerBound="36.1" HigherBound="37.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="74369644-036c-41e0-925b-7a424aa7498f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="38.1" HigherBound="40.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="27" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="FINT.BizTalk.Example.Orchestrations.PortType_GetEmployeesResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_SaveResponse" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="4d833db0-c469-4467-89f9-d5ff144fe365" ParentLink="PortDeclaration_CLRAttribute" LowerBound="38.1" HigherBound="39.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="cb18a843-78ac-47c4-bca4-74694c5c4f97" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="40.1" HigherBound="42.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="22" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="FINT.BizTalk.Example.Orchestrations.PortType_FintEmployees" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_GetEmployees" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="7ed32234-5680-4324-b3e2-b6e79f16d7d8" ParentLink="PortDeclaration_CLRAttribute" LowerBound="40.1" HigherBound="41.1">
+                    <om:Property Name="InPipeline" Value="FINT.BizTalk.Example.Pipelines.JsonReceivePipeline" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="HTTP" />
+                    <om:Property Name="URI" Value="http://tempURI" />
+                    <om:Property Name="IsDynamic" Value="True" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module FINT.BizTalk.Example.Orchestrations
+{
+    internal messagetype MultipartType_TriggerGetEmployees
+    {
+        body FINT.BizTalk.Example.Schemas.TriggerGetEmployees Message;
+    };
+    internal messagetype MultipartType_GetEmployeesResponse
+    {
+        body FINT.BizTalk.Example.Schemas.EmployeesSchema Message;
+    };
+    internal porttype PortType_TriggerGetEmployees
+    {
+        oneway Operation
+        {
+            MultipartType_TriggerGetEmployees
+        };
+    };
+    internal porttype PortType_FintEmployees
+    {
+        requestresponse Operation
+        {
+            MultipartType_TriggerGetEmployees, MultipartType_GetEmployeesResponse
+        };
+    };
+    internal porttype PortType_GetEmployeesResponse
+    {
+        oneway Operation
+        {
+            MultipartType_GetEmployeesResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service GetEmployeesFromFint
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements PortType_TriggerGetEmployees Port_TriggerGetEmployees;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_GetEmployeesResponse Port_SaveResponse;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding(typeof(FINT.BizTalk.Example.Pipelines.JsonReceivePipeline), typeof(Microsoft.BizTalk.DefaultPipelines.XMLTransmit))]
+        port uses dynamic PortType_FintEmployees Port_GetEmployees;
+        message MultipartType_TriggerGetEmployees TriggerGetEmployees;
+        message MultipartType_TriggerGetEmployees GetEmployeesRequest;
+        message MultipartType_GetEmployeesResponse GetEmployeesResponse;
+        System.String AccessToken;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6a2e8683-e5d7-4de3-b84e-eff7b20a9c29")]
+            activate ((BTS.ReceivePortName == "Trigger2"))receive (Port_TriggerGetEmployees.Operation, TriggerGetEmployees);
+            AccessToken = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("da23010d-d1e8-4f91-be7e-c6b5e3376776")]
+            call FINT.BizTalk.Example.Orchestrations.Authenticate (out AccessToken);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e064f19f-3d27-42b8-8826-e8cfbe7bcbb5")]
+            construct GetEmployeesRequest
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e0f71dfa-3cb5-4ab4-811a-9358afe1cf41")]
+                GetEmployeesRequest = TriggerGetEmployees;
+                
+                GetEmployeesRequest(WCF.HttpMethodAndUrl) = "GET";
+                GetEmployeesRequest(WCF.SuppressMessageBodyForHttpVerbs) = "GET";
+                GetEmployeesRequest(WCF.SecurityMode) = "Transport";
+                GetEmployeesRequest(WCF.MaxReceivedMessageSize) = 2147483647;
+                
+                GetEmployeesRequest(WCF.HttpHeaders) = "Authorization: Bearer " + AccessToken + "\r\nx-org-id: pwf.no\r\nuser-agent: BizTalk Server 2013 R2";
+                
+                GetEmployeesRequest(WCF.ProxyToUse) = "UserSpecified";
+                GetEmployeesRequest(WCF.ProxyAddress) = "http://localhost:8888/";
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("99b3f4d1-8518-42ac-9724-7f3b13ab4b89")]
+            Port_GetEmployees(Microsoft.XLANGs.BaseTypes.Address) = SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "FintUrlPersonalressurserBeta");
+            Port_GetEmployees(Microsoft.XLANGs.BaseTypes.TransportType) = "WCF-WebHttp";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("cbce7b78-66ee-463a-bc57-87bc2f6f9b31")]
+            send (Port_GetEmployees.Operation, GetEmployeesRequest);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e83cde7d-6515-44ce-ab75-85dec7d1f195")]
+            receive (Port_GetEmployees.Operation, GetEmployeesResponse);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7b47b9aa-f1c4-454c-ab7f-d134cac966ff")]
+            send (Port_SaveResponse.Operation, GetEmployeesResponse);
+        }
+    }
+}
+

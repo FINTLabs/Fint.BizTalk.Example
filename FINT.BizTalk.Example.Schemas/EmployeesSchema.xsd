@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://FINT.BizTalk.Example.Schemas.EmployeesSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Employees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_embedded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="_entries">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="ansattnummer">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="identifikatorverdi" type="xs:unsignedInt" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="ansettelsesperiode">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="slutt" type="xs:dateTime" />
+                          <xs:element minOccurs="0" name="start" type="xs:dateTime" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="brukernavn">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="gyldighetsperiode">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="slutt" type="xs:dateTime" />
+                                <xs:element minOccurs="0" name="start" type="xs:dateTime" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="identifikatorverdi" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="kontaktinformasjon">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="epostadresse" type="xs:string" />
+                          <xs:element minOccurs="0" name="mobiltelefonnummer" type="xs:unsignedInt" />
+                          <xs:element minOccurs="0" name="nettsted" type="xs:string" />
+                          <xs:element minOccurs="0" name="sip" type="xs:string" />
+                          <xs:element minOccurs="0" name="telefonnummer" type="xs:unsignedInt" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="systemId">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="identifikatorverdi" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="_links">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="person">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="href" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="personalressurskategori">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="href" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="arbeidsforhold">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="href" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="self">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="href" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="_links">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="self">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="href" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="total_items" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
