@@ -49,7 +49,7 @@ namespace FINT.BizTalk.Example.Pipelines
 "ccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410e-4cce-4536-83fa-4a5040674ad6\" />      <Components />   "+
 " </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "12325cfd-d8c4-41b7-9704-1a485e55e497";
+        private const string _versionDependentGuid = "fa191bbc-3c4b-48ab-adc1-9c54383276ed";
         
         public JsonReceivePipelineAuthenticate()
         {

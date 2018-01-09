@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FINT.BizTalk.Example.Orches
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FINT.BizTalk.Example.Pipelines", "FINT.BizTalk.Example.Pipelines\FINT.BizTalk.Example.Pipelines.btproj", "{F0843F4C-906E-4B15-9753-B16FBC46BC8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.BizTalk.Adapter.Behaviors", "Microsoft.BizTalk.Adapter.Behaviors\Microsoft.BizTalk.Adapter.Behaviors.csproj", "{6E793E1A-D9B5-4BCC-B0E6-84F773BE9AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{F0843F4C-906E-4B15-9753-B16FBC46BC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0843F4C-906E-4B15-9753-B16FBC46BC8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F0843F4C-906E-4B15-9753-B16FBC46BC8C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6E793E1A-D9B5-4BCC-B0E6-84F773BE9AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E793E1A-D9B5-4BCC-B0E6-84F773BE9AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E793E1A-D9B5-4BCC-B0E6-84F773BE9AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E793E1A-D9B5-4BCC-B0E6-84F773BE9AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

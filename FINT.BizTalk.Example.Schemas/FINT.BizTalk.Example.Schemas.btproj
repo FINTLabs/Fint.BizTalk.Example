@@ -42,6 +42,8 @@
     <None Include="..\..\sn.snk">
       <Link>sn.snk</Link>
     </None>
+  </ItemGroup>
+  <ItemGroup>
     <Schema Include="EmployeesSchema.xsd">
       <TypeName>EmployeesSchema</TypeName>
       <Namespace>FINT.BizTalk.Example.Schemas</Namespace>

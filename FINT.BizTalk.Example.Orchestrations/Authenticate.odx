@@ -2,7 +2,7 @@
 #error Do not define __DESIGNER_DATA.
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
-    <om:Element Type="Module" OID="e252290c-db84-4df3-9100-4cd499ebad44" LowerBound="1.1" HigherBound="63.1">
+    <om:Element Type="Module" OID="e252290c-db84-4df3-9100-4cd499ebad44" LowerBound="1.1" HigherBound="71.1">
         <om:Property Name="ReportToAnalyst" Value="True" />
         <om:Property Name="Name" Value="FINT.BizTalk.Example.Orchestrations" />
         <om:Property Name="Signal" Value="False" />
@@ -56,7 +56,7 @@
                 </om:Element>
             </om:Element>
         </om:Element>
-        <om:Element Type="ServiceDeclaration" OID="04dd1e71-f324-4eb7-b00c-2ee7daa74454" ParentLink="Module_ServiceDeclaration" LowerBound="26.1" HigherBound="62.1">
+        <om:Element Type="ServiceDeclaration" OID="04dd1e71-f324-4eb7-b00c-2ee7daa74454" ParentLink="Module_ServiceDeclaration" LowerBound="26.1" HigherBound="70.1">
             <om:Property Name="InitializedTransactionType" Value="False" />
             <om:Property Name="IsInvokable" Value="True" />
             <om:Property Name="TypeModifier" Value="Internal" />
@@ -92,10 +92,10 @@
                     <om:Property Name="Name" Value="Lag RequestAccessToken" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="MessageAssignment" OID="3b919e3e-8116-4212-90c6-5c129aed4a0f" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="49.1">
-                        <om:Property Name="Expression" Value="RequestAccessToken.Message = &quot;&quot;;&#xD;&#xA;&#xD;&#xA;RequestAccessToken(WCF.HttpMethodAndUrl) = &quot;POST&quot;;&#xD;&#xA;RequestAccessToken(WCF.SuppressMessageBodyForHttpVerbs) = &quot;POST&quot;;&#xD;&#xA;RequestAccessToken(WCF.SecurityMode) = &quot;Transport&quot;;&#xD;&#xA;&#xD;&#xA;RequestAccessToken(WCF.HttpHeaders) = &quot;Content-Type: application/x-www-form-urlencoded\r\nuser-agent: BizTalk Server 2013 R2&quot;;&#xD;&#xA;&#xD;&#xA;RequestAccessToken(WCF.ProxyToUse) = &quot;UserSpecified&quot;;&#xD;&#xA;RequestAccessToken(WCF.ProxyAddress) = &quot;http://localhost:8888/&quot;;" />
+                        <om:Property Name="Expression" Value="RequestAccessToken.Message = &quot;&quot;;&#xD;&#xA;&#xD;&#xA;RequestAccessToken(WCF.HttpMethodAndUrl) = &quot;POST&quot;;&#xD;&#xA;RequestAccessToken(WCF.SuppressMessageBodyForHttpVerbs) = &quot;POST&quot;;&#xD;&#xA;RequestAccessToken(WCF.SecurityMode) = &quot;Transport&quot;;&#xD;&#xA;&#xD;&#xA;RequestAccessToken(WCF.HttpHeaders) = &quot;Content-Type: application/x-www-form-urlencoded&quot;;&#xD;&#xA;&#xD;&#xA;RequestAccessToken(WCF.ProxyToUse) = SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;ProxyToUse&quot;);&#xD;&#xA;RequestAccessToken(WCF.ProxyAddress) = SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;ProxyUrl&quot;);&#xD;&#xA;" />
                         <om:Property Name="ReportToAnalyst" Value="False" />
                         <om:Property Name="Name" Value="MessageAssignment_1" />
-                        <om:Property Name="Signal" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
                     </om:Element>
                     <om:Element Type="MessageRef" OID="25d7a74e-3346-4435-8847-f47095369dbd" ParentLink="Construct_MessageRef" LowerBound="36.23" HigherBound="36.41">
                         <om:Property Name="Ref" Value="RequestAccessToken" />
@@ -103,13 +103,13 @@
                         <om:Property Name="Signal" Value="False" />
                     </om:Element>
                 </om:Element>
-                <om:Element Type="VariableAssignment" OID="7dc3ad2b-f6ef-4a7a-9e42-08b137ced195" ParentLink="ServiceBody_Statement" LowerBound="50.1" HigherBound="54.1">
-                    <om:Property Name="Expression" Value="//Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.Address) = SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;FintAccessTokenUri&quot;);&#xD;&#xA;Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.Address) = &quot;https://namidp01.rogfk.no/nidp/oauth/nam/token?client_id=6e1cf7b4-b107-42b3-9435-8fda70726c6a&amp;client_secret=6y4FUuP9BfAXeVqguNKT0ofToIwN5RdB1PaUvx_nCMiQbH9NeGq3pp0jQB9zOQ0APOxEbodzJXp-8RVux6318A&amp;username=pwfatut&amp;password=pwfatut&amp;grant_type=password&quot;;&#xD;&#xA;Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.TransportType) = &quot;WCF-WebHttp&quot;;" />
+                <om:Element Type="VariableAssignment" OID="7dc3ad2b-f6ef-4a7a-9e42-08b137ced195" ParentLink="ServiceBody_Statement" LowerBound="50.1" HigherBound="62.1">
+                    <om:Property Name="Expression" Value="&#xD;&#xA;Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.Address) = System.String.Format(&#xD;&#xA;    &quot;{0}?client_id={3}&amp;client_secret={4}&amp;username={1}&amp;password={2}&amp;grant_type=password&quot;,&#xD;&#xA;    SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;FintAccessTokenUri&quot;),&#xD;&#xA;    SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;FintUsername&quot;),&#xD;&#xA;    SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;FintPassword&quot;),&#xD;&#xA;    SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;FintClientId&quot;),&#xD;&#xA;    SSOSettingsFileReader.ReadString(&quot;FINT.BizTalk.Example&quot;, &quot;FintClientSecret&quot;)&#xD;&#xA;);&#xD;&#xA;&#xD;&#xA;Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.TransportType) = &quot;WCF-WebHttp&quot;;" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
-                    <om:Property Name="Name" Value="Expression_2" />
+                    <om:Property Name="Name" Value="Set port config" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Send" OID="45f5a965-93ee-485b-a090-b2daf90453aa" ParentLink="ServiceBody_Statement" LowerBound="54.1" HigherBound="56.1">
+                <om:Element Type="Send" OID="45f5a965-93ee-485b-a090-b2daf90453aa" ParentLink="ServiceBody_Statement" LowerBound="62.1" HigherBound="64.1">
                     <om:Property Name="PortName" Value="Port_RequestAccessToken" />
                     <om:Property Name="MessageName" Value="RequestAccessToken" />
                     <om:Property Name="OperationName" Value="Operation_1" />
@@ -118,7 +118,7 @@
                     <om:Property Name="Name" Value="Request Access Token" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Receive" OID="d875d621-fc41-41dc-a044-b28447243ba3" ParentLink="ServiceBody_Statement" LowerBound="56.1" HigherBound="58.1">
+                <om:Element Type="Receive" OID="d875d621-fc41-41dc-a044-b28447243ba3" ParentLink="ServiceBody_Statement" LowerBound="64.1" HigherBound="66.1">
                     <om:Property Name="Activate" Value="False" />
                     <om:Property Name="PortName" Value="Port_RequestAccessToken" />
                     <om:Property Name="MessageName" Value="RequestAccessTokenResponse" />
@@ -128,7 +128,7 @@
                     <om:Property Name="Name" Value="Receive Access Token" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="VariableAssignment" OID="fc6e5b39-c1b6-4c94-bf4d-0f37603456fd" ParentLink="ServiceBody_Statement" LowerBound="58.1" HigherBound="60.1">
+                <om:Element Type="VariableAssignment" OID="fc6e5b39-c1b6-4c94-bf4d-0f37603456fd" ParentLink="ServiceBody_Statement" LowerBound="66.1" HigherBound="68.1">
                     <om:Property Name="Expression" Value="AccessTokenOutput = RequestAccessTokenResponse.Message.access_token; &#xD;&#xA;" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="Expression_1" />
@@ -230,14 +230,22 @@ module FINT.BizTalk.Example.Orchestrations
                 RequestAccessToken(WCF.SuppressMessageBodyForHttpVerbs) = "POST";
                 RequestAccessToken(WCF.SecurityMode) = "Transport";
                 
-                RequestAccessToken(WCF.HttpHeaders) = "Content-Type: application/x-www-form-urlencoded\r\nuser-agent: BizTalk Server 2013 R2";
+                RequestAccessToken(WCF.HttpHeaders) = "Content-Type: application/x-www-form-urlencoded";
                 
-                RequestAccessToken(WCF.ProxyToUse) = "UserSpecified";
-                RequestAccessToken(WCF.ProxyAddress) = "http://localhost:8888/";
+                RequestAccessToken(WCF.ProxyToUse) = SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "ProxyToUse");
+                RequestAccessToken(WCF.ProxyAddress) = SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "ProxyUrl");
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("7dc3ad2b-f6ef-4a7a-9e42-08b137ced195")]
-            //Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.Address) = SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "FintAccessTokenUri");
-            Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.Address) = "https://namidp01.rogfk.no/nidp/oauth/nam/token?client_id=6e1cf7b4-b107-42b3-9435-8fda70726c6a&client_secret=6y4FUuP9BfAXeVqguNKT0ofToIwN5RdB1PaUvx_nCMiQbH9NeGq3pp0jQB9zOQ0APOxEbodzJXp-8RVux6318A&username=pwfatut&password=pwfatut&grant_type=password";
+            
+            Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.Address) = System.String.Format(
+                "{0}?client_id={3}&client_secret={4}&username={1}&password={2}&grant_type=password",
+                SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "FintAccessTokenUri"),
+                SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "FintUsername"),
+                SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "FintPassword"),
+                SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "FintClientId"),
+                SSOSettingsFileReader.ReadString("FINT.BizTalk.Example", "FintClientSecret")
+            );
+            
             Port_RequestAccessToken(Microsoft.XLANGs.BaseTypes.TransportType) = "WCF-WebHttp";
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("45f5a965-93ee-485b-a090-b2daf90453aa")]
             send (Port_RequestAccessToken.Operation_1, RequestAccessToken);
